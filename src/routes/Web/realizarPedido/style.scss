@@ -1,0 +1,129 @@
+// .c-order-item {
+//   display: flex;
+//   align-items: center;
+//   width: 100%;
+//   & > img {
+//     width: 25px;
+//     height: 25px;
+//     cursor: pointer;
+//     border-radius: 20%;
+//     transition: .5s ease-in;
+//     &:hover {
+//       background: linear-gradient(45deg, #f0f0f0, transparent);
+//       transition: .5s ease-out;
+//     }
+//   }
+// }
+
+// .img-order-add {
+//   height: 60px;
+//   width: 100%;
+//   background: linear-gradient(to top, #d8d8d8, transparent);
+//   & > img  {
+//     width: 60px;
+//     height: 60px;
+//     animation: road 10s linear infinite;
+//     cursor: pointer;
+//   }
+// }
+
+.pedido-content {
+  padding: 20px 100px;
+  & > h2 {
+    text-align: center;
+    padding: 10px 0px;
+    text-decoration: underline;
+  }
+  & > .perdido-form {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #cdcdcd;
+    & > .perdido-business-data {
+      height: 100px;
+      border-bottom: 1px solid #cdcdcd;
+      margin-bottom: 15px;
+      & > div {
+        padding: 5px 0px;
+        & span {
+          &:first-child {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    & > span  {
+      position: absolute;
+      font-weight: bold;
+      background-color: white;
+      height: 15px;
+      &::after {
+        content: "";
+        display: block;
+        transform: translateY(15px);
+        width: 418px;
+        height: 1px;
+        background-color: #cdcdcd;
+      }
+    }
+    & > .pedido-add-order {
+      height: 430px;
+      padding-right: 15px;
+      width: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        width: 10px;
+        background-color: lightgray;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.pedido-button-order {
+  margin: 30px auto 0px;
+  width: 300px;
+}
+
+.detail-buy {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid white;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    & > input  {
+      width: 50px;
+      border-radius: 3px;
+      border: none;
+      padding: 2px 5px;
+    }
+  }
+}
+
+@keyframes road {
+  0% {
+    transform: translateX(0px) scaleX(1);
+  }
+  
+  48% {
+    transform: translateX(365px) scaleX(1);
+  }
+  50% {
+    transform: translateX(365px) scaleX(-1);
+  }
+
+  98% {
+    transform: translateX(0px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0px) scaleX(1);
+  }
+}

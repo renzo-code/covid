@@ -1,0 +1,91 @@
+@keyframes modal {
+  0% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.modal {
+  position: fixed;
+  transition: 100ms;
+  animation: modal 0.2s;
+  display: none;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999999999999999999999999999999999999999;
+}
+
+.contentModal {
+  width: 40%;
+  height: auto;
+  margin: 10% auto;
+  background-color: white;
+  padding: 15px 20px 50px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.headerModal::after {
+  content: "";
+  display: block;
+  background-color: red;
+  height: 3px;
+  transform: scale(0, 1);
+  transition: 0.3s;
+}
+
+.headerModal:hover::after {
+  transform: scale(1, 1);
+}
+
+.close > span {
+  font-size: 20px;
+  transition: 500ms linear;
+  color: black;
+}
+
+.close > span:hover {
+  cursor: pointer;
+  color: gray;
+  transition: 300ms linear;
+}
+
+.name-button-modal {
+  text-align: center;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+
+@media screen and (max-width : 900px) {
+  .contentModal {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .contentModal {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width : 400px) {
+  .contentModal {
+    width: 100%;
+  }
+}
